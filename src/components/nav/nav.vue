@@ -82,6 +82,7 @@ export default {
   data() {
     return {
       flagFormblMenu: true,
+      menuInside : false
     };
   },
   methods: {
@@ -89,11 +90,12 @@ export default {
       console.log("clicked");
       if (this.flagFormblMenu) {
         this.flagFormblMenu = false;
+        
       } else {
         this.flagFormblMenu = true;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -101,5 +103,8 @@ export default {
 .margin-left-mbl {
   margin-top: -400px;
   transition-duration: 1s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 </style>

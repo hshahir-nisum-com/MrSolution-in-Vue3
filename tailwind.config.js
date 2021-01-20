@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       margin: {
-        "72": "18rem",
-      },
-    },
+        "72": "18rem"
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 };

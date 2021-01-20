@@ -9,7 +9,7 @@ import Home from "../components/index";
 export default {
   name: "index",
   components: {
-    Home,
-  },
+    Home
+  }
 };
 </script>
