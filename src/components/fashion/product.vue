@@ -1,6 +1,8 @@
 <template>
-  <div class="border-2 border-purple-500 flex flex-col">
-    <span v-if="product.length">{{ product[0].title }}</span>
+  <div v-if="product.length" class="border-2 border-purple-500 w-96">
+    <img :src="product[0].image" alt="img" />
+    <span>{{ product[0].title }}</span> <br />
+    <span>{{ product[0].price }}</span>
   </div>
 </template>
 <script>

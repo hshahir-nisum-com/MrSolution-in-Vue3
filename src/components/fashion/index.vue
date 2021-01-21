@@ -5,7 +5,7 @@
   <div class="container">
     <div class="flex flex-row">
       <div class="bg-opacity-10 mt-10 ml-20 mr-10 w-2/5 lg:block hidden">
-        <ul v-if="FashionProduct">
+        <ul>
           <li
             v-for="item in variant"
             :key="item"
