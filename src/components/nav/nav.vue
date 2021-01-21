@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto bg-purple-700 p-5 lg:text-3xl">
+  <div class="mx-auto bg-purple-700 p-2 lg:text-xl">
     <div class="flex-row md:justify-between text-white"></div>
     <nav class="flex-row md:justify-between text-white">
       <div class="flex flex-row justify-between">
-        <router-link to="/" class="font-sans lg:text-5xl"
+        <router-link to="/" class="font-sans lg:text-3xl"
           >Mr. Solution</router-link
         >
 
@@ -41,7 +41,7 @@
         <button class="md:hidden bg-purple-700" @click="toggleMenu">
           menu
         </button>
-        <ul class="hidden md:flex md:flex-row font-sans" id="mobileMenu">
+        <ul class="hidden md:flex md:flex-row font-sans pt-2" id="mobileMenu">
           <li class="pr-5">
             <router-link to="/services"> Services </router-link>
           </li>
@@ -55,11 +55,14 @@
     </nav>
   </div>
 
-  <div
-    class="bg-purple-300 lg:text-3xl lg:hidden"
-    :class="{ 'margin-left-mbl': flagFormblMenu }"
-  >
-    <nav class="flex-row justify-between text-white">
+  <div class="bg-purple-300 relativetochild lg:text-3xl lg:hidden firstChild">
+    <nav
+      class="flex-row justify-between text-white bg-purple-300"
+      :class="{
+        'margin-top-neg': flagFormblMenu,
+        'margin-top-pos': !flagFormblMenu,
+      }"
+    >
       <ul class="flex flex-col font-sans mbl-Close-relative" id="mobileMenu">
         <li class="float-right"></li>
         <li class="p-5">
@@ -82,7 +85,6 @@ export default {
   data() {
     return {
       flagFormblMenu: true,
-      menuInside : false
     };
   },
   methods: {
@@ -90,21 +92,27 @@ export default {
       console.log("clicked");
       if (this.flagFormblMenu) {
         this.flagFormblMenu = false;
-        
       } else {
         this.flagFormblMenu = true;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-.margin-left-mbl {
-  margin-top: -400px;
+.firstChild {
+  position: relative;
+}
+.margin-top-neg {
+  margin-top: -310px;
   transition-duration: 1s;
-  position: absolute;
   width: 100%;
-  z-index: -1;
+  margin-bottom: 70px;
+}
+.margin-top-pos {
+  width: 100%;
+  transition-duration: 1s;
+  margin-bottom: 30px;
 }
 </style>
