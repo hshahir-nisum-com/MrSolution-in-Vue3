@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto bg-purple-700 p-2 lg:text-xl">
+  <div class="mx-auto bg-purple-700 py-5 px-3 lg:text-xl">
     <div class="flex-row md:justify-between text-white"></div>
     <nav class="flex-row md:justify-between text-white">
       <div class="flex flex-row justify-between">
-        <router-link to="/" class="font-sans lg:text-3xl"
+        <router-link to="/" class="font-sans lg:text-3xl pl-5"
           >Mr. Solution</router-link
         >
 
@@ -16,7 +16,7 @@
           />
           <button
             type="submit"
-            class="absolute right-0 top-0 lg:mt-4  lg:mr-4 mr-3 mt-2"
+            class="absolute right-0 top-0 lg:mt-3  lg:mr-4 mr-3 mt-2"
           >
             <svg
               class="text-gray-600 h-4 w-4 fill-current"
@@ -105,10 +105,10 @@ export default {
   position: relative;
 }
 .margin-top-neg {
-  margin-top: -310px;
+  margin-top: -330px;
   transition-duration: 1s;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 .margin-top-pos {
   width: 100%;

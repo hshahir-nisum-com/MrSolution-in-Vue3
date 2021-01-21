@@ -1,8 +1,12 @@
 <template>
-  <div class=" lg:mt-10 mt-0 ">
+  <div class="lg:mt-10 mt-0">
     <carousel :items-to-show="1">
       <slide v-for="ind in 2" :key="ind">
-        <img :src="getImgUrl(ind)" v-bind:alt="ind + ' img missing'" />
+        <img
+          :src="getImgUrl(ind)"
+          v-bind:alt="ind + ' img missing'"
+          class="container mx-auto"
+        />
       </slide>
 
       <template #addons>
@@ -33,8 +37,12 @@ export default {
 </script>
 
 <style scoped>
-.carousel{
-  width: 80%;
-  margin : 0 auto;
+.carousel {
+  margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  .carousel {
+    width: 80% !important;
+  }
 }
 </style>
