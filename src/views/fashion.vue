@@ -1,15 +1,15 @@
 <template>
-  <Home />
+  <fashionTab />
 </template>
 
 <script>
 // @ is an alias to /src
-import Home from "../components/landingPage/index";
+import fashionTab from "../components/fashion/index";
 
 export default {
   name: "index",
   components: {
-    Home
-  }
+    fashionTab,
+  },
 };
 </script>

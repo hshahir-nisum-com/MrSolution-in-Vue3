@@ -1,8 +1,7 @@
 import { createStore } from "vuex";
+import * as fetchDataFromApi from "./fetchProduct";
 
 export default createStore({
   state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+  modules: {fetchDataFromApi},
 });

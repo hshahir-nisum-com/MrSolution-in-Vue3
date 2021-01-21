@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     getImgUrl(pet) {
-      var images = require.context("../../assets/", false, /\.png$/);
+      var images = require.context("../../../assets/", false, /\.png$/);
       return images("./" + pet + ".png");
     },
   },

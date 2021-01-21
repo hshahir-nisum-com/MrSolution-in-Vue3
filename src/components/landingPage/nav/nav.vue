@@ -43,7 +43,7 @@
         </button>
         <ul class="hidden md:flex md:flex-row font-sans pt-2" id="mobileMenu">
           <li class="pr-5">
-            <router-link to="/services"> Services </router-link>
+            <router-link to="/fashion"> Fashion </router-link>
           </li>
           <li class="pr-5">
             <router-link to="/portfolio">Portfolio</router-link>
@@ -67,7 +67,7 @@
         <li class="float-right"></li>
         <li class="p-5">
           <button @click="toggleMenu" class="float-right">X</button>
-          <router-link to="/services"> Services </router-link>
+          <router-link to="/fashion"> Fashion </router-link>
         </li>
         <li class="p-5">
           <router-link to="/portfolio">Portfolio</router-link>

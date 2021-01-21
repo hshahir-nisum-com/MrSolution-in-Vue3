@@ -20,11 +20,13 @@
 <script>
 import navBar from "./nav/nav";
 import slider from "./slider/slider";
-import apiFetch from "../api/apiFetch";
 import mainCategories from "./mainCat/mainCategori";
 import feature from "./features/featureOfSite";
 import review from "./reviews/mainReview";
 import myFooter from "./footer/footer";
+import { mapActions } from "vuex";
+import { mapState } from "vuex";
+
 export default {
   name: "home",
   components: {
@@ -35,8 +37,18 @@ export default {
     review,
     myFooter,
   },
+
   methods: {
-    handleClick: apiFetch(),
+    ...mapActions("fetchDataFromApi", ["fetchData"]),
+    async apiCall() {
+      await this.fetchData();
+    },
+  },
+  async created() {
+    await this.apiCall();
+  },
+  computed: {
+    ...mapState(["fetchDataFromApi"]),
   },
 };
 </script>
