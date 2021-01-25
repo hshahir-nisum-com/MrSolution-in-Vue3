@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <navBar />
-  </div>
-  <div class="container">
+  <div class="container mx-auto">
     <div class="flex flex-row">
-      <div class="bg-opacity-10 mt-10 ml-20 mr-10 w-2/5 lg:block hidden">
+      <div class="bg-opacity-10 mr-10 w-2/5 lg:block hidden">
         <ul>
           <li
             v-for="item in variant"
@@ -19,21 +16,19 @@
         <slider />
       </div>
     </div>
-    <div class="lg:mx-20 mx-10 mt-10">
+    <div class="mx-10 mt-10">
       <FashionProduct />
     </div>
   </div>
 </template>
 
 <script>
-import navBar from "../landingPage/nav/nav";
 import slider from "../landingPage/slider/slider";
 import FashionProduct from "./fashionProduct";
 
 export default {
   name: "fashion",
   components: {
-    navBar,
     slider,
     FashionProduct,
   },

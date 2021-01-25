@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:mt-10 mt-0">
+  <div class=" ">
     <carousel :items-to-show="1">
       <slide v-for="ind in 2" :key="ind">
         <img
@@ -43,6 +43,7 @@ export default {
 @media only screen and (max-width: 600px) {
   .carousel {
     width: 80% !important;
+    z-index: -1;
   }
 }
 </style>

@@ -89,9 +89,12 @@ export default {
 <style  scoped>
 .my.footer {
   color: #fff;
-  background: #4554e0 ;
+  background: #4554e0;
   -webkit-transition: background 1s; /* For Safari 3.0 to 6.0 */
   transition: background 1s; /* For modern browsers */
+  bottom: 0;
+  width: 100%;
+  position: sticky;
 }
 .my.footer:hover {
   background: #98a4ec;

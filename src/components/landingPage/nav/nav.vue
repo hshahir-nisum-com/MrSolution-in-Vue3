@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto bg-purple-700 py-5 px-3 lg:text-xl">
+  <div class="mx-auto bg-purple-700 py-5 px-3 lg:text-xl main-nav">
     <div class="flex-row md:justify-between text-white"></div>
     <nav class="flex-row md:justify-between text-white">
       <div class="flex flex-row justify-between">
@@ -16,7 +16,7 @@
           />
           <button
             type="submit"
-            class="absolute right-0 top-0 lg:mt-3  lg:mr-4 mr-3 mt-2"
+            class="absolute right-0 top-0 lg:mt-3 lg:mr-4 mr-3 mt-2"
           >
             <svg
               class="text-gray-600 h-4 w-4 fill-current"
@@ -46,7 +46,7 @@
             <router-link to="/fashion"> Fashion </router-link>
           </li>
           <li class="pr-5">
-            <router-link to="/portfolio">Portfolio</router-link>
+            <router-link to="/mens">Mens Cateogries</router-link>
           </li>
           <li class="pr-5"><router-link to="/About">About</router-link></li>
           <li class="pr-5"><router-link to="/contact">Contact</router-link></li>
@@ -70,7 +70,7 @@
           <router-link to="/fashion"> Fashion </router-link>
         </li>
         <li class="p-5">
-          <router-link to="/portfolio">Portfolio</router-link>
+          <router-link to="/mens">Mens Cateogries</router-link>
         </li>
         <li class="p-5"><router-link to="/About">About</router-link></li>
         <li class="p-5"><router-link to="/contact">Contact</router-link></li>
@@ -114,5 +114,12 @@ export default {
   width: 100%;
   transition-duration: 1s;
   margin-bottom: 30px;
+}
+.main-nav {
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 </style>

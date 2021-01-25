@@ -1,18 +1,20 @@
 <template>
-  <div v-if="product.length" class="border-2 border-purple-500 w-96">
-    <img :src="product[0].image" alt="img" />
-    <span>{{ product[0].title }}</span> <br />
-    <span>{{ product[0].price }}</span>
+  <div
+    class="border-2 border-black-500 w-72 p-5 my-10 rounded shadow-inner hover:shadow container mx-auto "
+  >
+    <img :src="img" alt="img" class="w-48 h-60 mx-auto" />
+    <p class="mt-5">{{ title }}</p>
+    <br />
+    <p class="mt-0">Price : {{ price }}$</p>
   </div>
 </template>
 <script>
 export default {
   name: "Product",
   props: {
-    product: {
-      type: Array,
-      required: true,
-    },
+    img: { required: true },
+    title: { required: true },
+    price: { required: true },
   },
 };
 </script>

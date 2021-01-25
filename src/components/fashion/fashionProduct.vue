@@ -2,10 +2,15 @@
   <div>
     <h1 class="lg:text-2xl">Our Top Selling Product</h1>
 
-    <Product
-      v-if="fetchDataFromApi.product"
-      :product="fetchDataFromApi.product"
-    />
+    <div class="grid lg:grid-cols-4 " v-if="fetchDataFromApi.product">
+      <Product
+        v-for="item in fetchDataFromApi.product"
+        :key="item"
+        :img="item.image"
+        :title="item.title"
+        :price="item.price"
+      />
+    </div>
   </div>
 </template>
 <script>

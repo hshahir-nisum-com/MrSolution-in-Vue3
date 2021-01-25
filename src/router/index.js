@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import index from "../views/index";
 import myfashion from "../views/fashion";
+import myMens from "../views/mens";
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: "/fashion",
     name: "fashion",
     component: myfashion,
+  },
+  {
+    path: "/mens",
+    name: "mens",
+    component: myMens,
   },
 ];
 
